@@ -1,3 +1,58 @@
 #awa-footer {
+    margin-top: -50px;
     padding: 40px 0 0;
+    position: relative;
+    z-index: 50;
+}
+
+.awa-footer-bird-wrap {
+    position: relative;
+}
+
+.awa-footer-bird {
+    max-width: 100px;
+    margin: auto;
+
+    &:before,
+    &:after {
+        content: "";
+        height: 2px;
+        width: 50%;
+        position: absolute;
+        background: $blueText;
+    }
+
+    &:before {
+        left: -45px;
+        top: 50%;
+        margin-top: -1px;
+    }
+
+    &:after {
+        right: -55px;
+        top: 71%;
+        margin-top: -1px;
+    }
+}
+
+.awa-footer-site-info {
+    padding: 0 0 30px;
+    margin: 30px 0 0;
+    color: darken(#babdc7, 5%);
+    @include font-poppins-regular;
+    text-align: center;
+
+    a {
+        color: $blueText;
+        line-height: 1;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+            outline: none;
+            border-bottom: 2px dotted $blueText;
+        }
+    }
 }

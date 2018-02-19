@@ -2,10 +2,10 @@
     background-color: #e1e9e2;
     background-image: url('../images/awa-map.png');
     background-size: cover;
-    background-position: center top;
+    background-position: center -110px;
     background-repeat: no-repeat;
 
-    padding: 0 0 50px;
+    padding: 0;
     position: relative;
     overflow: hidden;
 
@@ -105,4 +105,9 @@
 
 [class*="fxg-1-"].awa-contact-right {
     // padding-right: 0;
+}
+
+.awa-section-body-inner {
+    position: relative;
+    z-index: 100;
 }
