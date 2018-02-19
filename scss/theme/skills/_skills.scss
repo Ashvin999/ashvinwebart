@@ -1,0 +1,119 @@
+#awa-skills {
+    background-color: $darkBlue;
+    background-image: url(../images/awa-skills-cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 50px;
+
+    position: relative;
+
+    &:after {
+        @extend %section-top-line;
+    }
+}
+
+.awa-skills-inner {
+
+}
+
+.awa-skills-text {
+    @include font-poppins-300;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+    max-width: 1010px;
+    margin: 0 auto;
+}
+
+.awa-skills-grid-container {
+    .fxg-pad {
+        [class*="fxg-1-"] {
+            &:nth-child(4) {
+                margin-left: auto;
+            }
+            &:nth-child(5) {
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+.awa-skill-box {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+
+    > .awa-skill-box-inner {
+        @include size(100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 40px;
+    }
+
+    .awa-skill-circle-box {
+        @include size(100%);
+        padding: 35px;
+        position: relative;
+
+        & {
+            .awa-skill-math-circle {
+                fill: none;
+                stroke-width: .2;
+                stroke-dasharray: 100, 100;
+                stroke-linecap: round;
+            }
+
+            &.photoshop .awa-skill-math-circle {
+                stroke: $green;
+            }
+
+            &.illustrator .awa-skill-math-circle {
+                stroke: $red;
+            }
+
+            &.indesign .awa-skill-math-circle {
+                stroke: $blue;
+            }
+
+            &.corel .awa-skill-math-circle {
+                stroke: $yellow;
+            }
+
+            &.fireworks .awa-skill-math-circle {
+                stroke: $limeGreen;
+            }
+        }
+
+        .awa-skill-circle-box-inner {
+            position: absolute;
+            @include size(100%);
+            top: 0;
+            left: 0;
+        }
+
+        .awa-skill-circle-percentage {
+            @include center(both);
+            color: white;
+            @include font-poppins-300;
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1;
+        }
+    }
+
+    .awa-skill-name {
+        color: white;
+        @include font-museo;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+    }
+}
