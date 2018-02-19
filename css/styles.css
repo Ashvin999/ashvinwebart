@@ -418,6 +418,9 @@ template {
     padding: 0; }
     .fxg-pad.nopadding [class*=fxg-1-] {
       padding-right: 0; }
+  .fxg-pad:not(.nopadding) {
+    margin-left: -20px;
+    margin-right: -20px; }
   .fxg-pad.fxg-wrap {
     -webkit-box-lines: multiple;
     -moz-box-lines: multiple;
@@ -734,16 +737,17 @@ img {
   height: auto; }
 
 .awa-section {
-  padding: 90px; }
+  padding: 90px 0; }
 
 .awa-container {
   max-width: 1170px;
-  margin: auto; }
+  margin: auto;
+  padding: 0 20px; }
 
 .awa-section-body {
   padding-top: 30px; }
 
-.awa-hello-inner:after, #awa-skills:after, #awa-doing .awa-section-header:before {
+.awa-hello-inner:after, #awa-skills:after, #awa-doing .awa-section-header:before, #awa-logo .awa-section-header:after, #awa-work .awa-section-header:after, #awa-contact .awa-section-header:after {
   content: "";
   height: 40px;
   width: 1px;
@@ -770,11 +774,127 @@ img {
 .awa-section-sub-title {
   font-family: "Museo-500";
   font-weight: 500;
-  letter-spacing: 25px;
+  letter-spacing: 10px;
   font-size: 3rem;
   text-transform: uppercase;
   padding: 0;
-  margin: 0; }
+  margin: 10px; }
+
+.form-group {
+  position: relative;
+  margin-bottom: 40px; }
+  .form-group .text-input {
+    line-height: 1.5;
+    padding: 10px 15px 10px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #757575;
+    width: 100%;
+    background: transparent;
+    font-family: "Poppins-Regular";
+    font-size: 18px;
+    font-weight: normal;
+    color: #3c3f4b; }
+  .form-group textarea {
+    resize: vertical;
+    height: 140px; }
+  .form-group .text-input:focus {
+    outline: none; }
+  .form-group label {
+    color: #e75c43;
+    font-family: "Poppins-Regular";
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 15px;
+    top: 12px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all; }
+  .form-group .text-input:focus ~ label,
+  .form-group .text-input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #3c3f4b; }
+  .form-group .bar {
+    position: relative;
+    display: block;
+    width: 300px; }
+  .form-group .bar:before,
+  .form-group .bar:after {
+    content: '';
+    height: 1px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: #3c3f4b;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all; }
+  .form-group .bar:before {
+    left: 50%; }
+  .form-group .bar:after {
+    right: 50%; }
+  .form-group .text-input:focus ~ .bar:before,
+  .form-group .text-input:focus ~ .bar:after {
+    width: 50%; }
+  .form-group .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.2;
+    display: none; }
+  .form-group .text-input:focus ~ .highlight {
+    -webkit-animation: materialBar 0.3s ease;
+    -moz-animation: materialBar 0.3s ease;
+    animation: materialBar 0.3s ease; }
+
+@-webkit-keyframes materialBar {
+  from {
+    background: #e75c43; }
+  to {
+    width: 0;
+    background: transparent; } }
+
+@-moz-keyframes materialBar {
+  from {
+    background: #e75c43; }
+  to {
+    width: 0;
+    background: transparent; } }
+
+@keyframes materialBar {
+  from {
+    background: #e75c43; }
+  to {
+    width: 0;
+    background: transparent; } }
+
+.awa-btn {
+  white-space: nowrap;
+  border: 0;
+  font-family: "Museo-500";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: white;
+  padding: 15px 40px 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: background 0.15s linear;
+  -moz-transition: background 0.15s linear;
+  transition: background 0.15s linear; }
+  .awa-btn.awa-btn-green {
+    background: #acd157; }
+  .awa-btn:hover, .awa-btn:active, .awa-btn:focus {
+    background: #96c035; }
+  .awa-btn:focus {
+    outline: none; }
 
 @media screen and (max-width: 1023px) {
   .awa-header {
@@ -988,11 +1108,12 @@ img {
   margin-top: 30px; }
 
 .awa-section {
-  padding: 90px; }
+  padding: 90px 0; }
 
 .awa-container {
   max-width: 1170px;
-  margin: auto; }
+  margin: auto;
+  padding: 0 20px; }
 
 .awa-section-body {
   padding-top: 30px; }
@@ -1107,7 +1228,7 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding: 50px;
+  padding: 50px 0;
   position: relative; }
 
 .awa-skills-text {
@@ -1390,3 +1511,223 @@ img {
     height: 100%;
     width: 100%;
     fill: #3c3f4b; }
+
+#awa-logo {
+  position: relative;
+  padding: 50px 0; }
+  #awa-logo .awa-section-header .awa-section-title {
+    color: #3c3f4b; }
+  #awa-logo .awa-section-header .awa-section-sub-title {
+    color: #e75c43; }
+  #awa-logo .awa-section-header:after {
+    background: #fcd042; }
+
+.awa-logo-design-text,
+.awa-logo-design-steps-text {
+  font-family: Poppins-Light;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #3c3f4b;
+  max-width: 1010px;
+  margin: 0px auto; }
+
+.awa-logo-design-steps-text {
+  text-transform: uppercase;
+  color: #acd157;
+  font-size: 1.1rem;
+  margin-top: 5px;
+  position: relative;
+  display: inline-block; }
+  .awa-logo-design-steps-text:after, .awa-logo-design-steps-text:before {
+    content: "";
+    width: 20px;
+    height: 1px;
+    background: #acd157;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px; }
+  .awa-logo-design-steps-text:after {
+    right: -25px; }
+  .awa-logo-design-steps-text:before {
+    left: -25px; }
+
+.fxg-pad.awa-logo-design-grid {
+  padding-top: 50px; }
+
+.awa-logo-design-phase {
+  padding: 0 30px 0; }
+  .awa-logo-design-phase > img {
+    width: 100%;
+    max-width: 100%; }
+
+#awa-work {
+  background-image: url(../images/awa-work-cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: 50px 0;
+  position: relative; }
+  #awa-work .awa-section-header:after {
+    backgrround: #fcd042; }
+
+#awa-folio {
+  padding: 0;
+  margin-bottom: -1px; }
+
+.awa-folio-grid .awa-folio-item-wrap {
+  width: 33.3333%; }
+  @media screen and (max-width: 767px) {
+    .awa-folio-grid .awa-folio-item-wrap {
+      width: 50%;
+      height: 180px; } }
+  @media screen and (max-width: 500px) {
+    .awa-folio-grid .awa-folio-item-wrap {
+      width: 100%; } }
+  .awa-folio-grid .awa-folio-item-wrap .awa-folio-item {
+    position: relative;
+    padding-top: 90%; }
+    @media screen and (max-width: 767px) {
+      .awa-folio-grid .awa-folio-item-wrap .awa-folio-item {
+        padding-top: 0;
+        height: 100%; } }
+    .awa-folio-grid .awa-folio-item-wrap .awa-folio-item.awa-folio-item-big {
+      padding-top: 120%; }
+      @media screen and (max-width: 767px) {
+        .awa-folio-grid .awa-folio-item-wrap .awa-folio-item.awa-folio-item-big {
+          padding-top: 0; } }
+
+.awa-folio-grid .awa-folio-image-wrap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0; }
+  @media screen and (max-width: 767px) {
+    .awa-folio-grid .awa-folio-image-wrap {
+      position: relative; } }
+
+.awa-folio-grid .awa-folio-image {
+  margin: 0;
+  padding: 20px;
+  display: block; }
+  .awa-folio-grid .awa-folio-image img {
+    margin: auto;
+    width: 100%;
+    max-width: 350px; }
+    @media screen and (max-width: 767px) {
+      .awa-folio-grid .awa-folio-image img {
+        max-width: 170px; } }
+
+.awa-folio-grid .awa-folio-yellow {
+  background: #fcd042; }
+
+.awa-folio-grid .awa-folio-skyblue {
+  background: #d0e7e1; }
+
+.awa-folio-grid .awa-folio-grey {
+  background: #f0f0f0; }
+
+.awa-folio-grid .awa-folio-red {
+  background: #e75c43; }
+
+@media screen and (max-width: 767px) {
+  .awa-folio-grid .awa-folio-sm-yellow {
+    background: #fcd042; }
+  .awa-folio-grid .awa-folio-sm-skyblue {
+    background: #d0e7e1; }
+  .awa-folio-grid .awa-folio-sm-grey {
+    background: #f0f0f0; }
+  .awa-folio-grid .awa-folio-sm-red {
+    background: #e75c43; } }
+
+@media screen and (max-width: 500px) {
+  .awa-folio-grid .awa-folio-xsm-yellow {
+    background: #fcd042; }
+  .awa-folio-grid .awa-folio-xsm-skyblue {
+    background: #d0e7e1; }
+  .awa-folio-grid .awa-folio-xsm-grey {
+    background: #f0f0f0; }
+  .awa-folio-grid .awa-folio-xsm-red {
+    background: #e75c43; } }
+
+#awa-contact {
+  background-color: #e1e9e2;
+  background-image: url("../images/awa-map.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 0 0 50px;
+  position: relative;
+  overflow: hidden; }
+  #awa-contact .awa-section-header {
+    padding-top: 50px; }
+    #awa-contact .awa-section-header:after {
+      background: #3c3f4b; }
+    #awa-contact .awa-section-header .awa-section-title {
+      background: #d3ddd5;
+      color: #3c3f4b; }
+    #awa-contact .awa-section-header .awa-section-sub-title {
+      color: #acd157; }
+  #awa-contact .awa-gun-shot {
+    background: none; }
+    #awa-contact .awa-gun-shot .awa-gun-shot-circle-1 {
+      background: none;
+      box-shadow: none;
+      top: 0;
+      left: 0;
+      bottom: auto; }
+    #awa-contact .awa-gun-shot .awa-gun-shot-circle-2 {
+      overflow: hidden;
+      background: rgba(172, 209, 87, 0.3); }
+    #awa-contact .awa-gun-shot .awa-gun-shot-circle-3 {
+      overflow: hidden; }
+  #awa-contact .awa-section-body,
+  #awa-contact .awa-section-header {
+    z-index: 100;
+    position: relative; }
+
+.awa-contact-grid {
+  padding: 0 90px; }
+
+.awa-contact-cta-box > a,
+.awa-contact-email-box > a {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 2px dotted transparent; }
+  .awa-contact-cta-box > a > img,
+  .awa-contact-email-box > a > img {
+    max-width: 80px;
+    margin: auto; }
+  .awa-contact-cta-box > a > .awa-contact-cta-phone,
+  .awa-contact-cta-box > a > .awa-contact-cta-email,
+  .awa-contact-email-box > a > .awa-contact-cta-phone,
+  .awa-contact-email-box > a > .awa-contact-cta-email {
+    display: block;
+    margin-top: 15px;
+    color: #3c3f4b;
+    text-decoration: none;
+    font-family: "Museo-500";
+    font-weight: 500;
+    font-size: 1.3rem; }
+  .awa-contact-cta-box > a:focus, .awa-contact-cta-box > a:active, .awa-contact-cta-box > a:hover,
+  .awa-contact-email-box > a:focus,
+  .awa-contact-email-box > a:active,
+  .awa-contact-email-box > a:hover {
+    outline: none;
+    border-bottom: 2px dotted #3c3f4b; }
+
+.awa-contact-email-box {
+  padding-top: 30px; }
+
+.awa-contact-cta {
+  height: 100%;
+  padding: 20px 0 20px 20px; }
+  .awa-contact-cta .awa-contact-cta-inner {
+    height: 100%;
+    background: #fcd042;
+    -webkit-box-shadow: 10px 10px 0 0 #d3ddd5;
+    box-shadow: 10px 10px 0 0 #d3ddd5; }
+
+#awa-footer {
+  padding: 40px 0 0; }

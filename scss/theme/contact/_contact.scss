@@ -1,0 +1,108 @@
+#awa-contact {
+    background-color: #e1e9e2;
+    background-image: url('../images/awa-map.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    padding: 0 0 50px;
+    position: relative;
+    overflow: hidden;
+
+    .awa-section-header {
+        padding-top: 50px;
+        &:after {
+            @extend %section-top-line;
+            background: $blueText;
+        }
+
+        .awa-section-title {
+            background: #d3ddd5;
+            color: $blueText;
+        }
+
+        .awa-section-sub-title {
+            color: $limeGreen;
+        }
+    }
+
+    .awa-gun-shot {
+        background: none;
+        .awa-gun-shot-circle-1 {
+            background: none;
+            box-shadow: none;
+            top: 0;
+            left: 0;
+            bottom: auto;
+        }
+
+        .awa-gun-shot-circle-2 {
+            overflow: hidden;
+            background: rgba($limeGreen, .3);
+        }
+        
+        .awa-gun-shot-circle-3 {
+            overflow: hidden;
+        }
+    }
+
+    .awa-section-body,
+    .awa-section-header {
+        z-index: 100;
+        position: relative;
+    }
+}
+
+.awa-contact-grid {
+    padding: 0 90px;
+}
+
+.awa-contact-cta-box,
+.awa-contact-email-box {
+    > a {
+        display: inline-block;
+        > img {
+            max-width: 80px;
+            margin: auto;
+        }
+
+        > .awa-contact-cta-phone,
+        > .awa-contact-cta-email {
+            display: block;
+            margin-top: 15px;
+            color: $blueText;
+            text-decoration: none;
+            @include font-museo;
+            font-weight: 500;
+            font-size: 1.3rem;
+        }
+        text-decoration: none;
+        border-bottom: 2px dotted transparent;
+        &:focus,
+        &:active,
+        &:hover {
+            outline: none;
+            border-bottom: 2px dotted $blueText;
+        }
+    }
+}
+
+.awa-contact-email-box {
+    padding-top: 30px;
+}
+
+.awa-contact-cta {
+    height: 100%;
+    padding: 20px 0 20px 20px;
+
+    .awa-contact-cta-inner {
+        height: 100%;
+        background: $yellow;
+        -webkit-box-shadow: 10px 10px 0 0 #d3ddd5;
+        box-shadow: 10px 10px 0 0 #d3ddd5;
+    }
+}
+
+[class*="fxg-1-"].awa-contact-right {
+    // padding-right: 0;
+}

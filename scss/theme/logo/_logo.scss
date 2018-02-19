@@ -1,0 +1,71 @@
+#awa-logo {
+    position: relative;
+    padding: 50px 0;
+    .awa-section-header {
+
+        .awa-section-title {
+            color: $blueText;
+        }
+
+        .awa-section-sub-title {
+            color: $red;
+        }
+
+        &:after {
+            @extend %section-top-line;
+            background: $yellow;
+        }
+    }
+}
+
+.awa-logo-design-text,
+.awa-logo-design-steps-text {
+    font-family: Poppins-Light;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $blueText;
+    max-width: 1010px;
+    margin: 0px auto;
+}
+
+.awa-logo-design-steps-text {
+    text-transform: uppercase;
+    color: $limeGreen;
+    font-size: 1.1rem;
+    margin-top: 5px;;
+    position: relative;
+    display: inline-block;
+
+    &:after,
+    &:before {
+        content: "";
+        width: 20px;
+        height: 1px;
+        background: $limeGreen;
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+    }
+
+    &:after {
+        right: -25px;
+    }
+    
+    &:before {
+        left: -25px;
+    }
+}
+
+.fxg-pad.awa-logo-design-grid {
+    padding-top: 50px;
+}
+
+.awa-logo-design-phase {
+    padding: 0 30px 0;
+
+    > img {
+        width: 100%;
+        max-width: 100%;
+    }
+}

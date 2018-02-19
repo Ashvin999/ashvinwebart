@@ -1,0 +1,16 @@
+#awa-work {
+    background-image: url(../images/awa-work-cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    padding: 50px 0;
+    position: relative;
+
+    .awa-section-header {
+        &:after {
+            @extend %section-top-line;
+            backgrround: $yellow;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 721.731 721.731">
+    <line fill="none" stroke="#ABABAB" stroke-width="4" stroke-miterlimit="10" x1="511.246" y1="191.016" x2="119.646" y2="550.61"/>
+    <g>
+        <defs>
+            <rect id="a" width="721.731" height="721.731"/>
+        </defs>
+        <clipPath id="b">
+            <use xlink:href="#a"  overflow="visible"/>
+        </clipPath>
+        
+        <circle clip-path="url(#b)" fill="none" stroke="#AAAAAA" stroke-width="4" stroke-miterlimit="10" cx="360.866" cy="360.866" r="358.865"/>
+        <path clip-path="url(#b)" fill="none" stroke="#ABABAB" stroke-width="4" stroke-miterlimit="10" d="M600.837,375.652 c0,139.322-123.056,251.564-274.849,252.266c-40.217,0.186-80.701-4.011-112.153-16.504 C107.271,569.084,54.968,486.215,51.141,375.652c-4.87-140.734,124.335-248.068,276.13-248.068 C479.065,127.583,600.837,236.329,600.837,375.652z"/>
+        <rect x="119.646" y="99.084" clip-path="url(#b)" fill="none" stroke="#ABABAB" stroke-width="4" stroke-miterlimit="10" width="481.191" height="527.514"/>
+        <line clip-path="url(#b)" fill="none" stroke="#ABABAB" stroke-width="4" stroke-miterlimit="10" x1="327.271" y1="127.583" x2="327.271" y2="626.588"/>
+        <line clip-path="url(#b)" fill="none" stroke="#ABABAB" stroke-width="4" stroke-miterlimit="10" x1="51.141" y1="361.061" x2="600.543" y2="361.061"/>
+        <path clip-path="url(#b)" fill="none" stroke="#EB555F" stroke-width="4" stroke-miterlimit="10" d="M576.287,196.653 c-16.375-33.533-38.136-62.462-65.272-86.827c-27.148-24.345-58.493-43.303-94.014-56.887 c-35.53-13.562-72.866-20.36-111.974-20.36c-35.928,0-69.869,5.992-101.795,17.967c-31.945,11.977-60.685,28.35-86.23,49.1 l88.623,50.3c-45.507,19.163-82.631,49.1-111.377,89.821c-28.744,40.714-43.107,87.031-43.107,138.926 c0,34.332,6.581,66.461,19.752,96.406c13.177,29.935,30.936,56.096,53.297,78.438c22.344,22.363,48.503,40.119,78.441,53.292 c29.939,13.179,62.072,19.76,96.406,19.76h301.8V305.634C600.838,266.527,592.645,230.186,576.287,196.653z"/>
+    </g>
+</svg>

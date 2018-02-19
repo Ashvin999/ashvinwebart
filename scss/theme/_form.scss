@@ -1,0 +1,144 @@
+// FORM STYLING
+.form-group {
+    position: relative;
+    margin-bottom: 40px;
+
+    .text-input {
+        line-height: 1.5;
+        padding: 10px 15px 10px;
+        display: block;
+        border: none;
+        border-bottom: 1px solid #757575;
+        width: 100%;
+        background: transparent;
+
+        @include font-poppins-regular;
+        font-size: 18px;
+        font-weight: normal;
+        color: $blueText;
+    }
+
+    textarea {
+        resize: vertical;
+        height: 140px;
+    }
+
+    .text-input:focus {
+        outline: none;
+    }
+
+    // LABELS
+    label {
+        color: $red;
+        @include font-poppins-regular;
+        font-size: 18px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 15px;
+        top: 12px;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+
+    // ACTIVE STATE
+    .text-input:focus~label,
+    .text-input:valid~label {
+        top: -20px;
+        font-size: 14px;
+        color: $blueText;
+    }
+
+    // BOTTOM BARS
+    .bar {
+        position: relative;
+        display: block;
+        width: 300px;
+    }
+
+    .bar:before,
+    .bar:after {
+        content: '';
+        height: 1px;
+        width: 0;
+        bottom: 0;
+        position: absolute;
+        background: $blueText;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+
+    .bar:before {
+        left: 50%;
+    }
+
+    .bar:after {
+        right: 50%;
+    }
+
+    // ACTIVE STATE
+    .text-input:focus~.bar:before,
+    .text-input:focus~.bar:after {
+        width: 50%;
+    }
+
+    // HIGHTLIGHTER
+    .highlight {
+        position: absolute;
+        height: 60%;
+        width: 100px;
+        top: 25%;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.2;
+        display: none;
+    }
+
+
+    // ACTIVE STATE
+    .text-input:focus~.highlight {
+        @include animation(materialBar 0.3s ease);
+    }
+
+    // ANIMATIONS
+    @include keyframes(materialBar) {
+        from {
+            background: $red;
+        }
+        to {
+            width: 0;
+            background: transparent;
+        }
+    }
+}
+
+.awa-btn {
+    white-space: nowrap;
+    border: 0;
+    @include font-museo;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: white;
+    padding: 15px 40px 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    @include transition(background .15s linear);
+
+    &.awa-btn-green {
+        background: $limeGreen;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: darken($limeGreen, 10%);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

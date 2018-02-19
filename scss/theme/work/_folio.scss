@@ -1,0 +1,106 @@
+#awa-folio {
+    padding: 0;
+    margin-bottom: -1px;
+}
+
+.awa-folio-grid {
+
+    .awa-folio-item-wrap {
+        width: 33.3333%;
+
+        @include breakpoint(mobile) {
+            width: 50%;
+            height: 180px;
+
+            .jcc {
+                // @include justify-content(flex-start);
+            }
+        }
+
+        @include customMax(500px) {
+            width: 100%;
+        }
+
+        .awa-folio-item {
+            position: relative;
+            padding-top: 90%;
+
+            @include breakpoint(mobile) {
+                padding-top: 0;
+                height: 100%;
+            }
+
+            &.awa-folio-item-big {
+                padding-top: 120%;
+
+                @include breakpoint(mobile) {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+    .awa-folio-image-wrap {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+
+        @include breakpoint(mobile) {
+            position: relative;
+
+            &.fxg-flexy {
+                // display: block;
+            }
+        }
+    }
+
+    .awa-folio-image {
+        margin: 0;
+        padding: 20px;
+        display: block;
+        img {
+            margin: auto;
+            width: 100%;
+            max-width: 350px;
+
+            @include breakpoint(mobile) {
+                // margin: 0;
+                max-width: 170px;
+            }
+        }
+    }
+
+    .awa-folio-yellow { background: $yellow; }
+    .awa-folio-skyblue { background: $skyBlue; }
+    .awa-folio-grey { background: $greyishWhite; }
+    .awa-folio-red { background: $red; }
+
+    @include breakpoint(mobile) {
+        .awa-folio-sm-yellow { background: $yellow; }
+        .awa-folio-sm-skyblue { background: $skyBlue; }
+        .awa-folio-sm-grey { background: $greyishWhite; }
+        .awa-folio-sm-red { background: $red; }
+    }
+
+    @include customMax(500px) {
+        .awa-folio-xsm-yellow { background: $yellow; }
+        .awa-folio-xsm-skyblue { background: $skyBlue; }
+        .awa-folio-xsm-grey { background: $greyishWhite; }
+        .awa-folio-xsm-red { background: $red; }
+    }
+
+    @include breakpoint(mobile) {
+        .awa-folio-item-wrap {
+            .awa-folio-item {
+                // background: $greyishWhite;
+            }
+            &:nth-child(3n+1) {
+                .awa-folio-item {
+                    // background: $yellow;
+                }
+            }
+        }
+    }
+}

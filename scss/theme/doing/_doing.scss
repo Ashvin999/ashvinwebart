@@ -217,6 +217,6 @@
 
     > svg {
         @include size(100%);
-        fill: #3c3f4b;
+        fill: $blueText;
     }
 }
