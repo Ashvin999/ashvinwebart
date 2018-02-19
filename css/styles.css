@@ -743,7 +743,7 @@ img {
 .awa-section-body {
   padding-top: 30px; }
 
-.awa-hello-inner:after, #awa-skills:after, #awa-doing .awa-section-header:after {
+.awa-hello-inner:after, #awa-skills:after, #awa-doing .awa-section-header:before {
   content: "";
   height: 40px;
   width: 1px;
@@ -1193,11 +1193,18 @@ img {
 #awa-doing {
   padding: 0; }
   #awa-doing .awa-section-header {
-    padding: 130px 0;
-    position: relative; }
-    #awa-doing .awa-section-header:after {
-      height: 120px;
-      background: #1f212b; }
+    padding: 130px 0; }
+    #awa-doing .awa-section-header:before {
+      height: 100%;
+      top: auto;
+      bottom: auto;
+      background: #1f212b;
+      margin-top: -10px;
+      -webkit-transform: translateY(-100%);
+      -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      -o-transform: translateY(-100%);
+      transform: translateY(-100%); }
     #awa-doing .awa-section-header .awa-section-sub-title {
       font-size: 1.8rem;
       letter-spacing: 10px;
@@ -1288,7 +1295,8 @@ img {
 
 .awa-doing-right-top,
 .awa-doing-right-bottom {
-  padding: 30px; }
+  padding: 30px;
+  position: relative; }
 
 .awa-doing-right-top {
   background: #e1e9e2; }
@@ -1347,3 +1355,38 @@ img {
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0); }
+
+.awa-skills-text-slider .awa-skill-text-slide {
+  padding: 10px 0 10px;
+  color: #3e414d; }
+  .awa-skills-text-slider .awa-skill-text-slide .awa-skill-text-title {
+    font-family: "Museo-500";
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0;
+    margin: 0 0 20px;
+    text-transform: uppercase; }
+  .awa-skills-text-slider .awa-skill-text-slide .awa-skill-text-content {
+    font-family: "Poppins-Light";
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5; }
+    .awa-skills-text-slider .awa-skill-text-slide .awa-skill-text-content p {
+      padding: 0;
+      margin: 0; }
+
+.awa-skill-arrow {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 32px;
+  margin-top: -16px;
+  z-index: 1; }
+  .awa-skill-arrow#awa-skill-prev {
+    left: 30px; }
+  .awa-skill-arrow#awa-skill-next {
+    right: 30px; }
+  .awa-skill-arrow > svg {
+    height: 100%;
+    width: 100%;
+    fill: #3c3f4b; }

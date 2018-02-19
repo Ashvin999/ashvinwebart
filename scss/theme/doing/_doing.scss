@@ -9,12 +9,15 @@
 
     .awa-section-header {
         padding: 130px 0;
-        position: relative;
 
-        &:after {
+        &:before {
             @extend %section-top-line;
-            height: 120px;
+            height: 100%;
+            top: auto;
+            bottom: auto;
             background: $darkBlue;
+            margin-top: -10px;
+            @include transform(translateY(-100%));
         }
 
         .awa-section-sub-title {
@@ -111,6 +114,7 @@
 .awa-doing-right-top,
 .awa-doing-right-bottom {
     padding: 30px;
+    position: relative;
 }
 
 .awa-doing-right-top {
@@ -165,5 +169,54 @@
             opacity: 1;
             @include transform(translateY(0));
         }
+    }
+}
+
+.awa-skills-text-slider {
+    .awa-skill-text-slide {
+        padding: 10px 0 10px;
+        color: #3e414d;
+        .awa-skill-text-title {
+            @include font-museo;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0;
+            margin: 0 0 20px;
+            text-transform: uppercase;
+        }
+
+        .awa-skill-text-content {
+            font-family: "Poppins-Light";
+            font-weight: 300;
+            font-size: 1rem;
+            line-height: 1.5;
+
+            p {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.awa-skill-arrow {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 32px;
+    margin-top: -16px;
+    z-index: 1;
+
+    &#awa-skill-prev {
+        left: 30px;
+    }
+
+    &#awa-skill-next {
+        right: 30px;
+    }
+
+    > svg {
+        @include size(100%);
+        fill: #3c3f4b;
     }
 }
