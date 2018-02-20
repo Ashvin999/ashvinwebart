@@ -11,10 +11,18 @@
     &:after {
         @extend %section-top-line;
     }
+
+    @include breakpoint(mobile) {
+        .awa-section-body {
+            padding-top: 0;
+        }
+    }
 }
 
 .awa-skills-inner {
-
+    @include breakpoint(mobile) {
+        padding: 0 40px;
+    }
 }
 
 .awa-skills-text {
@@ -36,6 +44,17 @@
             &:nth-child(5) {
                 margin-right: auto;
             }
+
+            @include breakpoint(mobile) {
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @include breakpoint(mobile) {
+            max-width: 350px;
+            margin: auto;
         }
     }
 }
@@ -51,12 +70,19 @@
         top: 0;
         left: 0;
         padding: 40px;
+        @include breakpoint(mobile) {
+            padding: 20px;
+        }
     }
 
     .awa-skill-circle-box {
         @include size(100%);
         padding: 35px;
         position: relative;
+
+        @include breakpoint(mobile) {
+            padding: 20px;
+        }
 
         & {
             .awa-skill-math-circle {

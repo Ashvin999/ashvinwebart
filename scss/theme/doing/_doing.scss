@@ -10,6 +10,10 @@
     .awa-section-header {
         padding: 130px 0;
 
+        @include customMax(1023px) {
+            padding: 50px 0;
+        }
+
         &:before {
             @extend %section-top-line;
             height: 100%;
@@ -26,6 +30,7 @@
             color: lighten($darkBlue, 10%);
             line-height: 1;
             margin-top: 20px;
+            margin-bottom: 0;
         }
     }
 }
@@ -123,6 +128,11 @@
 
 .awa-doing-right-bottom {
     background: white;
+    padding: 40px 30px;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+    }
 }
 
 // SLICK SLIDER
@@ -174,7 +184,7 @@
 
 .awa-skills-text-slider {
     .awa-skill-text-slide {
-        padding: 10px 0 10px;
+        // padding: 10px 0 10px;
         color: #3e414d;
         .awa-skill-text-title {
             @include font-museo;
@@ -218,5 +228,14 @@
     > svg {
         @include size(100%);
         fill: $blueText;
+    }
+}
+
+@include customMax(1023px) {
+    .awa-doing-grid .fxg-pad {
+        @include flex-wrap(wrap);
+        > [class*="fxg-1-"] {
+            width: 100%;
+        }
     }
 }

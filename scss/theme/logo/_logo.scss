@@ -1,19 +1,49 @@
 #awa-logo {
     position: relative;
     padding: 50px 0;
+
+    @include customMax(1023px) {
+        padding: 0;
+    }
     .awa-section-header {
 
         .awa-section-title {
             color: $blueText;
+            background: darken(#efefef, 5%);
+
+            @include customMax(1023px) {
+                color: $red;
+                background: white;
+            }
         }
 
         .awa-section-sub-title {
             color: $red;
+
+            @include customMax(1023px) {
+                color: white;
+                margin-bottom: 0;
+            }
         }
 
         &:after {
             @extend %section-top-line;
             background: $yellow;
+
+            @include customMax(1023px) {
+                background: white;
+            }
+        }
+
+        @include customMax(1023px) {
+            background: $red;
+            padding: 50px 0;
+        }
+    }
+
+    .awa-section-body {
+        @include customMax(1023px) {
+            padding-bottom: 40px;
         }
     }
 }
@@ -59,6 +89,18 @@
 
 .fxg-pad.awa-logo-design-grid {
     padding-top: 50px;
+
+    @include breakpoint(mobile) {
+        padding-top: 0;
+        @include flex-wrap(wrap);
+        max-width: 400px;
+        margin: auto;
+
+        > [class*="fxg-1-"] {
+            width: 50%;
+            margin-top: 30px;
+        }
+    }
 }
 
 .awa-logo-design-phase {

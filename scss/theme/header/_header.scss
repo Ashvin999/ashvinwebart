@@ -22,6 +22,8 @@
 
 .awa-header-right-grid {
     background: $yellow;
+    position: relative;
+    z-index: 1;
 }
 
 .awa-header-left {

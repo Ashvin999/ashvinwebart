@@ -28,6 +28,9 @@
 
     .awa-gun-shot {
         background: none;
+        @include breakpoint(mobile) {
+            display: none;
+        }
         .awa-gun-shot-circle-1 {
             background: none;
             box-shadow: none;
@@ -51,19 +54,86 @@
         z-index: 100;
         position: relative;
     }
+
+    .awa-section-body {
+        @include breakpoint(mobile) {
+            padding-top: 0;
+        }
+    }
 }
 
 .awa-contact-grid {
     padding: 0 90px;
+
+    @include customMax(1023px) {
+        @include flex-wrap(wrap);
+
+        > [class*=fxg-1-] {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding: 0 50px;
+    }
+
+    &.awa-contact-grid-sd {
+        @include customMax(1023px) {
+            margin: 20px 0 40px;
+            padding-left: 70px;
+            padding-right: 70px;
+            @include flex-wrap(nowrap);
+
+            @include breakpoint(mobile) {
+                @include flex-wrap(wrap);
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            > [class*=fxg-1-] {
+                width: 50%;
+                padding-right: 0;
+
+                @include customMax(650px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 .awa-contact-cta-box,
 .awa-contact-email-box {
+
+    @include customMax(1023px) {
+        &.awa-contact-cta-box {
+            margin-right: 5px;
+
+            @include customMax(650px) {
+                margin-right: 0;
+            }
+        }
+        &.awa-contact-email-box {
+            margin-left: 5px;
+
+            @include customMax(650px) {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    }
     > a {
         display: inline-block;
+        @include customMax(1023px) {
+            display: block;
+        }
         > img {
             max-width: 80px;
             margin: auto;
+
+            @include customMax(1023px) {
+                display: none;
+            }
         }
 
         > .awa-contact-cta-phone,
@@ -75,6 +145,13 @@
             @include font-museo;
             font-weight: 500;
             font-size: 1.3rem;
+
+            @include customMax(1023px) {
+                margin-top: 0;
+                border: 2px dotted $blueText;
+                padding: 10px;
+                width: 100%;
+            }
         }
         text-decoration: none;
         border-bottom: 2px dotted transparent;
@@ -89,11 +166,19 @@
 
 .awa-contact-email-box {
     padding-top: 30px;
+
+    @include customMax(1023px) {
+        padding-top: 0;
+    }
 }
 
 .awa-contact-cta {
     height: 100%;
     padding: 20px 0 20px 20px;
+
+    @include customMax(1023px) {
+        padding-left: 0;
+    }
 
     .awa-contact-cta-inner {
         height: 100%;
@@ -110,4 +195,12 @@
 .awa-section-body-inner {
     position: relative;
     z-index: 100;
+}
+
+.awa-contact-form {
+    @include breakpoint(mobile) {
+        [class*="fxg-1-"] {
+            width: 100%;
+        }
+    }
 }

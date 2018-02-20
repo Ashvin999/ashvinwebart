@@ -36,7 +36,16 @@
         slidesToScroll: 1,
         arrows: false,
         centerMode: true,
-        asNavFor: '#awa-skills-text-slider'
+        asNavFor: '#awa-skills-text-slider',
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
     });
 
     $('#awa-skills-text-slider').slick({

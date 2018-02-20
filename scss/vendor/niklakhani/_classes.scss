@@ -22,3 +22,20 @@
 .tar {
     text-align: right;
 }
+
+.for-sd,
+.for-ld {
+    display: none;
+}
+
+@include customMin(1024px) {
+    .for-ld {
+        display: block;
+    }
+}
+
+@include customMax(1023px) {
+    .for-sd {
+        display: block;
+    }
+}

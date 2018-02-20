@@ -1,11 +1,18 @@
 .awa-section {
     padding: 90px 0;
+    @include customMax(1023px) {
+        padding: 0;
+    }
 }
 
 .awa-container {
     max-width: 1170px;
     margin: auto;
     padding: 0 20px;
+
+    @include customMax(1023px) {
+        padding: 0;
+    }
 }
 
 .awa-section-body {
