@@ -30,6 +30,7 @@
 // };
 
 (function($) {
+    // Initialized skills slider for icons
     $('#awa-skills-slider').slick({
         infinite: true,
         slidesToShow: 3,
@@ -48,6 +49,7 @@
         }]
     });
 
+    // Initialized slick slider for skills description
     $('#awa-skills-text-slider').slick({
         infinite: true,
         slidesToShow: 1,
@@ -58,19 +60,59 @@
         asNavFor: '#awa-skills-slider'
     });
 
+    // Skills slider arrow navigation - Preview
     $('#awa-skill-prev').on('click', function(e) {
         e.preventDefault();
         $('#awa-skills-slider').slick('slickPrev');
     });
     
+    // Skills slider arrow navigation - Next
     $('#awa-skill-next').on('click', function(e) {
         e.preventDefault();
         $('#awa-skills-slider').slick('slickNext');
     });
 
+    // Portfolio masonry
     $('.awa-folio-grid').masonry({
         itemSelector: '.awa-folio-item-wrap'
     });
+
+    // CIRCLE ANIMATION
+    function circleAnimation() {
+        $('.revealOnScroll:not(.animated) .awa-skill-math-circle[data-progress]').each(function() {
+            var el = $(this),
+                pr = el.attr('data-progress');
+
+            setTimeout(function() {
+                el.attr('stroke-dashoffset', (100 - pr));
+            }, 0);
+        });
+    }
+
+    // Reveal Animation on Scroll
+    var $window           = $(window),
+        win_height_padded = $window.height() * 1.1,
+        isTouch           = Modernizr.touchevents;
+
+    if (isTouch)
+        $('.revealOnScroll').addClass('animated');
+    $window.on('scroll', revealOnScroll);
+
+    function revealOnScroll() {
+        var scrolled          = $window.scrollTop(),
+            win_height_padded = $window.height() * 1.1;
+
+        $(".revealOnScroll:not(.animated)").each(function() {
+            var $this = $(this),
+                offsetTop = $this.offset().top;
+
+            if (scrolled + win_height_padded > offsetTop) {
+                circleAnimation();
+                $this.addClass('animated');
+            }
+        });
+    }
+    revealOnScroll();
 
     // $('.awa-logo-design-phase').on('click', function(e) {
     //     alert(1);
@@ -80,4 +122,5 @@
     //         "strokeColor": "#0000ff"
     //     }).lazylinepainter('paint');
     // });
+    
 })(jQuery);

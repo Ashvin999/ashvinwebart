@@ -88,8 +88,12 @@
             .awa-skill-math-circle {
                 fill: none;
                 stroke-width: .2;
-                stroke-dasharray: 100, 100;
-                stroke-linecap: round;
+                stroke-dasharray: 100;
+                stroke-linecap: butt;
+
+                &[data-progress] {
+                    @include transition(all 3s ease-in-out);
+                }
             }
 
             &.photoshop .awa-skill-math-circle {

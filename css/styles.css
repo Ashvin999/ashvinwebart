@@ -1245,7 +1245,13 @@ img {
         background-size: 95% 100%;
         background-position: center center;
         background-repeat: no-repeat;
-        position: relative; }
+        position: relative;
+        opacity: .75;
+        -webkit-transition: opacity 0.15s linear;
+        -moz-transition: opacity 0.15s linear;
+        transition: opacity 0.15s linear; }
+        .awa-hello-social ul li a:hover {
+          opacity: 1; }
         .awa-hello-social ul li a svg {
           fill: white;
           width: 22px;
@@ -1359,8 +1365,12 @@ img {
     .awa-skill-box .awa-skill-circle-box .awa-skill-math-circle {
       fill: none;
       stroke-width: .2;
-      stroke-dasharray: 100, 100;
-      stroke-linecap: round; }
+      stroke-dasharray: 100;
+      stroke-linecap: butt; }
+      .awa-skill-box .awa-skill-circle-box .awa-skill-math-circle[data-progress] {
+        -webkit-transition: all 3s ease-in-out;
+        -moz-transition: all 3s ease-in-out;
+        transition: all 3s ease-in-out; }
     .awa-skill-box .awa-skill-circle-box.photoshop .awa-skill-math-circle {
       stroke: #46b2a2; }
     .awa-skill-box .awa-skill-circle-box.illustrator .awa-skill-math-circle {
