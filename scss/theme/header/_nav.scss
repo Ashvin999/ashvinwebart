@@ -1,0 +1,78 @@
+%awa-menu-items {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 50px;
+    @include display(flex);
+    @include align-items(center);
+}
+
+.awa-menu-items-left,
+.awa-menu-items-right {
+    @extend %awa-menu-items;
+
+    > a {
+        text-decoration: none;
+        color: $red;
+        border-bottom: 2px dotted transparent;
+
+        @include transition(transform 0.2s linear, opacity 0.2s linear);
+        opacity: 0;
+
+        &:nth-child(1) {
+            @include transition-delay(0.1s);
+        }
+        &:nth-child(2) {
+            @include transition-delay(0.2s);
+        }
+        &:nth-child(3) {
+            @include transition-delay(0.3s);
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            border-bottom: 2px dotted $red;
+        }
+    }
+}
+
+.awa-menu-items-left {
+    left: -25px;
+    @include justify-content(flex-end);
+
+    > a {
+        margin-right: 30px;
+        @include transform(translateX(30px));
+    }
+}
+
+.awa-menu-items-right {
+    right: -25px;
+
+    > a {
+        margin-left: 30px;
+        @include transform(translateX(-30px));
+    }
+}
+
+.awa-hb-path-outer-stroke,
+.awa-hb-path-inner-stroke {
+    @include transition(all 0.25s linear);
+    @include transform-origin(50% 50%);
+}
+
+.large-menu {
+    .awa-menu-items-left,
+    .awa-menu-items-right {
+        > a {
+            @include transform(translateX(0));
+            opacity: 1;
+        }
+    }
+
+    .awa-hb-path-outer-stroke,
+    .awa-hb-path-inner-stroke {
+        @include transform(rotate(45deg));
+    }
+}

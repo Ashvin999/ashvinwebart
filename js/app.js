@@ -30,76 +30,84 @@
 // };
 
 (function($) {
+    // Menu
+    $("#awa-menu-toggle").on("click", function(e) {
+        $("body").toggleClass("large-menu");
+    });
+
     // Initialized skills slider for icons
-    $('#awa-skills-slider').slick({
+    $("#awa-skills-slider").slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
         centerMode: true,
-        asNavFor: '#awa-skills-text-slider',
+        asNavFor: "#awa-skills-text-slider",
         autoplay: true,
         autoplaySpeed: 3000,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        }]
+        ]
     });
 
     // Initialized slick slider for skills description
-    $('#awa-skills-text-slider').slick({
+    $("#awa-skills-text-slider").slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         fade: true,
-        cssEase: 'linear',
-        asNavFor: '#awa-skills-slider'
+        cssEase: "linear",
+        asNavFor: "#awa-skills-slider"
     });
 
     // Skills slider arrow navigation - Preview
-    $('#awa-skill-prev').on('click', function(e) {
+    $("#awa-skill-prev").on("click", function(e) {
         e.preventDefault();
-        $('#awa-skills-slider').slick('slickPrev');
+        $("#awa-skills-slider").slick("slickPrev");
     });
-    
+
     // Skills slider arrow navigation - Next
-    $('#awa-skill-next').on('click', function(e) {
+    $("#awa-skill-next").on("click", function(e) {
         e.preventDefault();
-        $('#awa-skills-slider').slick('slickNext');
+        $("#awa-skills-slider").slick("slickNext");
     });
 
     // Portfolio masonry
-    $('.awa-folio-grid').masonry({
-        itemSelector: '.awa-folio-item-wrap'
+    $(".awa-folio-grid").masonry({
+        itemSelector: ".awa-folio-item-wrap"
     });
 
     // CIRCLE ANIMATION
     function circleAnimation() {
-        $('.revealOnScroll:not(.animated) .awa-skill-math-circle[data-progress]').each(function() {
+        $(
+            ".revealOnScroll:not(.animated) .awa-skill-math-circle[data-progress]"
+        ).each(function() {
             var el = $(this),
-                pr = el.attr('data-progress');
+                pr = el.attr("data-progress");
 
             setTimeout(function() {
-                el.attr('stroke-dashoffset', (100 - pr));
+                el.attr("stroke-dashoffset", 100 - pr);
             }, 0);
         });
     }
 
     // Reveal Animation on Scroll
-    var $window           = $(window),
+    var $window = $(window),
         win_height_padded = $window.height() * 1.1,
-        isTouch           = Modernizr.touchevents;
+        isTouch = Modernizr.touchevents;
 
-    if (isTouch)
-        $('.revealOnScroll').addClass('animated');
-    $window.on('scroll', revealOnScroll);
+    if (isTouch) $(".revealOnScroll").addClass("animated");
+    $window.on("scroll", revealOnScroll);
 
     function revealOnScroll() {
-        var scrolled          = $window.scrollTop(),
+        var scrolled = $window.scrollTop(),
             win_height_padded = $window.height() * 1.1;
 
         $(".revealOnScroll:not(.animated)").each(function() {
@@ -108,7 +116,7 @@
 
             if (scrolled + win_height_padded > offsetTop) {
                 circleAnimation();
-                $this.addClass('animated');
+                $this.addClass("animated");
             }
         });
     }
@@ -122,5 +130,4 @@
     //         "strokeColor": "#0000ff"
     //     }).lazylinepainter('paint');
     // });
-    
 })(jQuery);

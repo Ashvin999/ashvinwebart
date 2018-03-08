@@ -13,7 +13,6 @@
 
 // DESKTOP HEADER
 .awa-header-grid {
-    
 }
 
 .awa-header-left-grid {
@@ -43,7 +42,7 @@
         background-size: 650px;
         z-index: -1;
         @include transform(rotate(10deg) translate(270px, -100px));
-        opacity: .15;
+        opacity: 0.15;
 
         @include customMax(1199px) {
             background-size: 550px;
@@ -133,7 +132,7 @@
 }
 
 .awa-header-right-v-logo-tag-shadow {
-    opacity: .12;
+    opacity: 0.12;
     margin-top: -12px;
     margin-left: 12px;
 }
@@ -192,7 +191,7 @@
                     top: 12px;
                     margin-left: 12px;
                     @include center(horizontal);
-                    opacity: .12;
+                    opacity: 0.12;
                 }
             }
         }
@@ -225,14 +224,17 @@
 }
 
 .awa-hamburger-icon {
-    position: relative;
     @include size(50px);
     margin: 0 auto 0;
 
     .awa-hamburger-icon-wrap {
-        > a {
+        > a.awa-toggler {
             display: block;
             line-height: 0;
+
+            svg {
+                overflow: visible;
+            }
         }
     }
 
@@ -258,3 +260,5 @@
         margin-top: 30px;
     }
 }
+
+@import "nav";
