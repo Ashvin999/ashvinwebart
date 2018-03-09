@@ -4,7 +4,6 @@
 }
 
 .awa-folio-grid {
-
     .awa-folio-item-wrap {
         width: 33.3333%;
 
@@ -72,23 +71,158 @@
         }
     }
 
-    .awa-folio-yellow { background: $yellow; }
-    .awa-folio-skyblue { background: $skyBlue; }
-    .awa-folio-grey { background: $greyishWhite; }
-    .awa-folio-red { background: $red; }
+    .awa-overlay-category {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        @include display(flex);
+        @include flex-direction(column);
+        @include justify-content(center);
+
+        > span {
+            width: 100%;
+            height: auto;
+            text-align: center;
+
+            &:nth-child(odd) > span:before {
+                @include transform(skewX(0));
+            }
+            &:nth-child(even) > span:before {
+                @include transform(skewX(0));
+            }
+
+            > span {
+                width: 170px;
+                margin: 0 auto 2px;
+                padding: 15px 0;
+
+                @include customMax(1023px) {
+                    padding: 10px 0;
+                }
+
+                display: block;
+                position: relative;
+                z-index: 10;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    @include size(100%);
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+
+                    @include transition(transform 0.2s linear);
+                }
+            }
+        }
+    }
+
+    .awa-overlay-category {
+        opacity: 0;
+        @include transition(opacity 0.2s linear);
+        @include transition-delay(0.2s);
+    }
+
+    .overlay-link {
+        z-index: 100;
+        &:hover {
+            + .awa-overlay-category {
+                opacity: 1;
+                @include transition(opacity 0.2s linear);
+                > span {
+                    &:nth-child(odd) > span:before {
+                        @include transition-delay(0.2s);
+                        @include transform(skewX(-10deg));
+                    }
+                    &:nth-child(even) > span:before {
+                        @include transition-delay(0.2s);
+                        @include transform(skewX(10deg));
+                    }
+                }
+            }
+        }
+    }
+
+    .awa-folio-yellow {
+        background: $yellow;
+        .awa-overlay-category {
+            background: $yellow;
+            > span > span {
+                color: $yellow;
+                &:before {
+                    background: white;
+                }
+            }
+        }
+    }
+    .awa-folio-skyblue {
+        background: $skyBlue;
+        .awa-overlay-category {
+            background: $skyBlue;
+            > span > span {
+                color: white;
+                &:before {
+                    background: $blue;
+                }
+            }
+        }
+    }
+    .awa-folio-grey {
+        background: $greyishWhite;
+        .awa-overlay-category {
+            background: $greyishWhite;
+            > span > span {
+                color: white;
+                &:before {
+                    background: #555;
+                }
+            }
+        }
+    }
+    .awa-folio-red {
+        background: $red;
+        .awa-overlay-category {
+            background: $red;
+            > span > span {
+                color: $red;
+                &:before {
+                    background: white;
+                }
+            }
+        }
+    }
 
     @include breakpoint(mobile) {
-        .awa-folio-sm-yellow { background: $yellow; }
-        .awa-folio-sm-skyblue { background: $skyBlue; }
-        .awa-folio-sm-grey { background: $greyishWhite; }
-        .awa-folio-sm-red { background: $red; }
+        .awa-folio-sm-yellow {
+            background: $yellow;
+        }
+        .awa-folio-sm-skyblue {
+            background: $skyBlue;
+        }
+        .awa-folio-sm-grey {
+            background: $greyishWhite;
+        }
+        .awa-folio-sm-red {
+            background: $red;
+        }
     }
 
     @include customMax(500px) {
-        .awa-folio-xsm-yellow { background: $yellow; }
-        .awa-folio-xsm-skyblue { background: $skyBlue; }
-        .awa-folio-xsm-grey { background: $greyishWhite; }
-        .awa-folio-xsm-red { background: $red; }
+        .awa-folio-xsm-yellow {
+            background: $yellow;
+        }
+        .awa-folio-xsm-skyblue {
+            background: $skyBlue;
+        }
+        .awa-folio-xsm-grey {
+            background: $greyishWhite;
+        }
+        .awa-folio-xsm-red {
+            background: $red;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -96,7 +230,7 @@
             .awa-folio-item {
                 // background: $greyishWhite;
             }
-            &:nth-child(3n+1) {
+            &:nth-child(3n + 1) {
                 .awa-folio-item {
                     // background: $yellow;
                 }
