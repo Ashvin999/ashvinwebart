@@ -44,7 +44,7 @@
         centerMode: true,
         asNavFor: "#awa-skills-text-slider",
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 6000,
         responsive: [
             {
                 breakpoint: 768,
@@ -121,6 +121,19 @@
         });
     }
     revealOnScroll();
+
+    $(".awa-menu-item").on("click", function(e) {
+        e.preventDefault();
+        var el = $(this),
+            target = el.attr("href");
+
+        $("html, body").animate(
+            {
+                scrollTop: $(target).offset().top
+            },
+            3000
+        );
+    });
 
     // $('.awa-logo-design-phase').on('click', function(e) {
     //     alert(1);
