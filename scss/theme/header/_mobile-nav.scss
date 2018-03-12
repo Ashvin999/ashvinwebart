@@ -1,0 +1,129 @@
+//////////////////////////// Primary Navigation
+#awa-mobile-nav {
+    @include center("both");
+    position: fixed;
+    width: 450px;
+    height: 300px;
+    z-index: 8000;
+    visibility: hidden;
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-size: 0;
+        height: 100%;
+        padding-left: 10px;
+        position: relative;
+        li {
+            display: inline-block;
+            width: 33.3333%;
+            height: 50%;
+            padding-right: 10px;
+            padding-top: 10px;
+            position: relative;
+
+            @include customMax(500px) {
+                width: 100%;
+                height: 60px;
+            }
+            a {
+                display: block;
+                height: 100%;
+                font-size: 0.9rem;
+                background: white;
+                text-align: center;
+                line-height: 140px;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-weight: 600;
+                color: $red;
+
+                -webkit-box-shadow: inset 3px 3px 0 white,
+                    inset -3px -3px 0 white, inset 6px 6px 0 $red,
+                    inset -6px -6px 0 $red;
+                box-shadow: inset 3px 3px 0 white, inset -3px -3px 0 white,
+                    inset 6px 6px 0 $red, inset -6px -6px 0 $red;
+
+                @include customMax(500px) {
+                    line-height: 52px;
+                }
+            }
+            opacity: 0;
+            visibility: hidden;
+            @include transition(all 0.3s ease-in);
+            &:nth-child(1) {
+                @include transform(translate(-100px, -100px));
+            }
+            &:nth-child(2) {
+                @include transform(translateY(-100px));
+            }
+            &:nth-child(3) {
+                @include transform(translate(100px, -100px));
+            }
+            &:nth-child(4) {
+                @include transform(translate(-100px, 100px));
+            }
+            &:nth-child(5) {
+                @include transform(translateY(100px));
+            }
+            &:nth-child(6) {
+                @include transform(translate(100px, 100px));
+            }
+
+            @include customMax(500px) {
+                &:nth-child(odd) {
+                    @include transform(translate(-100px, 0));
+                }
+                &:nth-child(even) {
+                    @include transform(translate(100px, 0));
+                }
+            }
+        }
+    }
+}
+
+.awa-nav-overlay {
+    cursor: pointer;
+    background: rgba(black, 0.4);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 6000;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(all 0.3s linear);
+}
+
+body.awa-nav-active {
+    .awa-nav-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+    #awa-mobile-nav {
+        li {
+            opacity: 1;
+            visibility: visible;
+            @include transition(all 0.3s ease-in);
+            &:nth-child(1) {
+                @include transform(translate(0));
+            }
+            &:nth-child(2) {
+                @include transform(translate(0));
+            }
+            &:nth-child(3) {
+                @include transform(translate(0));
+            }
+            &:nth-child(4) {
+                @include transform(translate(0));
+            }
+            &:nth-child(5) {
+                @include transform(translate(0));
+            }
+            &:nth-child(6) {
+                @include transform(translate(0));
+            }
+        }
+    }
+}

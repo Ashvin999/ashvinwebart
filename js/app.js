@@ -217,4 +217,17 @@ var phaseTwo = {
             });
         }, 1000);
     }
+
+    $(".awa-mobile-hamburger, .awa-nav-overlay").on("click", function(e) {
+        e.preventDefault();
+        $("body").toggleClass("awa-nav-active");
+        $(".awa-mobile-hamburger").toggleClass("is-active");
+    });
+
+    $(document).on("keyup", function(e) {
+        if (e.keyCode == 27) {
+            $("body").removeClass("awa-nav-active");
+            $(".awa-mobile-hamburger").removeClass("is-active");
+        }
+    });
 })(jQuery);
