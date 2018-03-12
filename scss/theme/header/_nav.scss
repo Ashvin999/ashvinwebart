@@ -18,6 +18,7 @@
 
         @include transition(transform 0.2s linear, opacity 0.2s linear);
         opacity: 0;
+        visibility: hidden;
 
         &:nth-child(1) {
             @include transition-delay(0.1s);
@@ -68,6 +69,7 @@
         > a {
             @include transform(translateX(0));
             opacity: 1;
+            visibility: visible;
         }
     }
 

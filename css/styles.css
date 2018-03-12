@@ -1333,7 +1333,8 @@ body.awa-nav-active #awa-mobile-nav li {
   -webkit-transition: -webkit-transform 0.2s linear, opacity 0.2s linear;
   -moz-transition: -moz-transform 0.2s linear, opacity 0.2s linear;
   transition: transform 0.2s linear, opacity 0.2s linear;
-  opacity: 0; }
+  opacity: 0;
+  visibility: hidden; }
   .awa-menu-items-left > a:nth-child(1),
   .awa-menu-items-right > a:nth-child(1) {
     -webkit-transition-delay: 0.1s;
@@ -1402,7 +1403,8 @@ body.awa-nav-active #awa-mobile-nav li {
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
-  opacity: 1; }
+  opacity: 1;
+  visibility: visible; }
 
 .large-menu .awa-hb-path-outer-stroke,
 .large-menu .awa-hb-path-inner-stroke {
