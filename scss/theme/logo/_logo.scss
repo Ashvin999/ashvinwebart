@@ -6,7 +6,6 @@
         padding: 0;
     }
     .awa-section-header {
-
         .awa-section-title {
             color: $blueText;
             background: darken(#efefef, 5%);
@@ -63,7 +62,7 @@
     text-transform: uppercase;
     color: $limeGreen;
     font-size: 1.1rem;
-    margin-top: 5px;;
+    margin-top: 5px;
     position: relative;
     display: inline-block;
 
@@ -81,7 +80,7 @@
     &:after {
         right: -25px;
     }
-    
+
     &:before {
         left: -25px;
     }
@@ -110,4 +109,33 @@
         width: 100%;
         max-width: 100%;
     }
+}
+
+[id^="awa-logo-design-phase-"] {
+    @include transition(all 0.25s linear);
+    visibility: hidden;
+    opacity: 0;
+}
+
+path[class^="awa-path-p4-"] {
+    fill: none;
+    stroke: $red;
+}
+
+path.awa-path-p4-2,
+path.awa-path-p4-4 {
+    stroke: none;
+}
+
+.clonned-awa-path-p4-1 {
+    fill: $red;
+}
+
+.clonned-awa-path-p4-2 {
+    fill: white;
+}
+
+.clonned-awa-path-p4-1,
+.clonned-awa-path-p4-2 {
+    display: none;
 }

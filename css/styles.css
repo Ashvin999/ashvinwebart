@@ -829,7 +829,7 @@ a:link {
   .form-group .text-input:focus {
     outline: none; }
   .form-group label {
-    color: #e75c43;
+    color: #ef5e65;
     font-family: "Poppins-Regular";
     font-size: 18px;
     font-weight: normal;
@@ -883,21 +883,21 @@ a:link {
 
 @-webkit-keyframes materialBar {
   from {
-    background: #e75c43; }
+    background: #ef5e65; }
   to {
     width: 0;
     background: transparent; } }
 
 @-moz-keyframes materialBar {
   from {
-    background: #e75c43; }
+    background: #ef5e65; }
   to {
     width: 0;
     background: transparent; } }
 
 @keyframes materialBar {
   from {
-    background: #e75c43; }
+    background: #ef5e65; }
   to {
     width: 0;
     background: transparent; } }
@@ -1075,7 +1075,7 @@ a:link {
       max-width: 250px; } }
 
 .awa-header-mobile {
-  background: #e75c43;
+  background: #ef5e65;
   padding: 20% 20px;
   position: relative; }
 
@@ -1133,7 +1133,7 @@ a:link {
   .awa-hamburger-icon.white .awa-hamburger-icon-wrap [class^="awa-hb-path-"] {
     fill: white; }
   .awa-hamburger-icon.red .awa-hamburger-icon-wrap [class^="awa-hb-path-"] {
-    fill: #e75c43; }
+    fill: #ef5e65; }
 
 .awa-hamburger-mobile .awa-hamburger-icon {
   margin-top: 30px; }
@@ -1164,7 +1164,7 @@ a:link {
 .awa-menu-items-left > a,
 .awa-menu-items-right > a {
   text-decoration: none;
-  color: #e75c43;
+  color: #ef5e65;
   border-bottom: 2px dotted transparent;
   -webkit-transition: -webkit-transform 0.2s linear, opacity 0.2s linear;
   -moz-transition: -moz-transform 0.2s linear, opacity 0.2s linear;
@@ -1189,7 +1189,7 @@ a:link {
   .awa-menu-items-right > a:hover,
   .awa-menu-items-right > a:active,
   .awa-menu-items-right > a:focus {
-    border-bottom: 2px dotted #e75c43; }
+    border-bottom: 2px dotted #ef5e65; }
 
 .awa-menu-items-left {
   left: -25px;
@@ -1494,7 +1494,7 @@ a:link {
     .awa-skill-box .awa-skill-circle-box.photoshop .awa-skill-math-circle {
       stroke: #46b2a2; }
     .awa-skill-box .awa-skill-circle-box.illustrator .awa-skill-math-circle {
-      stroke: #e75c43; }
+      stroke: #ef5e65; }
     .awa-skill-box .awa-skill-circle-box.indesign .awa-skill-math-circle {
       stroke: #5093cf; }
     .awa-skill-box .awa-skill-circle-box.corel .awa-skill-math-circle {
@@ -1766,10 +1766,10 @@ a:link {
     background: #e2e2e2; }
     @media screen and (max-width: 1023px) {
       #awa-logo .awa-section-header .awa-section-title {
-        color: #e75c43;
+        color: #ef5e65;
         background: white; } }
   #awa-logo .awa-section-header .awa-section-sub-title {
-    color: #e75c43; }
+    color: #ef5e65; }
     @media screen and (max-width: 1023px) {
       #awa-logo .awa-section-header .awa-section-sub-title {
         color: white;
@@ -1781,7 +1781,7 @@ a:link {
         background: white; } }
   @media screen and (max-width: 1023px) {
     #awa-logo .awa-section-header {
-      background: #e75c43;
+      background: #ef5e65;
       padding: 50px 0; } }
   @media screen and (max-width: 1023px) {
     #awa-logo .awa-section-body {
@@ -1840,6 +1840,31 @@ a:link {
   .awa-logo-design-phase > img {
     width: 100%;
     max-width: 100%; }
+
+[id^="awa-logo-design-phase-"] {
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  visibility: hidden;
+  opacity: 0; }
+
+path[class^="awa-path-p4-"] {
+  fill: none;
+  stroke: #ef5e65; }
+
+path.awa-path-p4-2,
+path.awa-path-p4-4 {
+  stroke: none; }
+
+.clonned-awa-path-p4-1 {
+  fill: #ef5e65; }
+
+.clonned-awa-path-p4-2 {
+  fill: white; }
+
+.clonned-awa-path-p4-1,
+.clonned-awa-path-p4-2 {
+  display: none; }
 
 #awa-work {
   background-image: url(../images/awa-work-cover.jpg);
@@ -2059,11 +2084,11 @@ a:link {
         background: #555; }
 
 .awa-folio-grid .awa-folio-red {
-  background: #e75c43; }
+  background: #ef5e65; }
   .awa-folio-grid .awa-folio-red .awa-overlay-category {
-    background: #e75c43; }
+    background: #ef5e65; }
     .awa-folio-grid .awa-folio-red .awa-overlay-category > span > span {
-      color: #e75c43; }
+      color: #ef5e65; }
       .awa-folio-grid .awa-folio-red .awa-overlay-category > span > span:before {
         background: white; }
 
@@ -2075,7 +2100,7 @@ a:link {
   .awa-folio-grid .awa-folio-sm-grey {
     background: #f0f0f0; }
   .awa-folio-grid .awa-folio-sm-red {
-    background: #e75c43; } }
+    background: #ef5e65; } }
 
 @media screen and (max-width: 500px) {
   .awa-folio-grid .awa-folio-xsm-yellow {
@@ -2085,7 +2110,7 @@ a:link {
   .awa-folio-grid .awa-folio-xsm-grey {
     background: #f0f0f0; }
   .awa-folio-grid .awa-folio-xsm-red {
-    background: #e75c43; } }
+    background: #ef5e65; } }
 
 #awa-contact {
   background-color: #e1e9e2;
