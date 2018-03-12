@@ -230,4 +230,8 @@ var phaseTwo = {
             $(".awa-mobile-hamburger").removeClass("is-active");
         }
     });
+
+    $("#awa-contact-form").on("submit", function(e) {
+        e.preventDefault();
+    });
 })(jQuery);
