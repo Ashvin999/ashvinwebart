@@ -10,6 +10,7 @@
         @include breakpoint(mobile) {
             width: 50%;
             height: 180px;
+            min-height: 280px;
 
             .jcc {
                 // @include justify-content(flex-start);

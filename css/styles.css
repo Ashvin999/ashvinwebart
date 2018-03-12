@@ -1455,10 +1455,19 @@ a:link {
     margin-left: auto;
     margin-right: auto; } }
 
+@media screen and (max-width: 450px) {
+  .awa-skills-grid-container .fxg-pad [class*="fxg-1-"] {
+    width: 100%;
+    margin-top: 20px; } }
+
 @media screen and (max-width: 767px) {
   .awa-skills-grid-container .fxg-pad {
-    max-width: 350px;
+    max-width: 450px;
     margin: auto; } }
+
+@media screen and (max-width: 450px) {
+  .awa-skills-grid-container .fxg-pad {
+    max-width: 200px; } }
 
 .awa-skill-box {
   width: 100%;
@@ -1484,7 +1493,7 @@ a:link {
         padding: 20px; } }
     .awa-skill-box .awa-skill-circle-box .awa-skill-math-circle {
       fill: none;
-      stroke-width: .2;
+      stroke-width: 0.2;
       stroke-dasharray: 100;
       stroke-linecap: butt; }
       .awa-skill-box .awa-skill-circle-box .awa-skill-math-circle[data-progress] {
@@ -1514,11 +1523,14 @@ a:link {
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
+      height: 50px;
+      width: 50px;
       color: white;
       font-family: "Poppins-Light";
       font-size: 1.5rem;
+      text-align: center;
       font-weight: 300;
-      line-height: 1; }
+      line-height: 50px; }
   .awa-skill-box .awa-skill-name {
     color: white;
     font-family: "Museo-500";
@@ -1912,7 +1924,8 @@ path.awa-path-p4-4 {
   @media screen and (max-width: 767px) {
     .awa-folio-grid .awa-folio-item-wrap {
       width: 50%;
-      height: 180px; } }
+      height: 180px;
+      min-height: 280px; } }
   @media screen and (max-width: 500px) {
     .awa-folio-grid .awa-folio-item-wrap {
       width: 100%; } }

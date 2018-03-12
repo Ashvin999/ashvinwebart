@@ -50,11 +50,20 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+
+            @include customMax(450px) {
+                width: 100%;
+                margin-top: 20px;
+            }
         }
 
         @include breakpoint(mobile) {
-            max-width: 350px;
+            max-width: 450px;
             margin: auto;
+        }
+
+        @include customMax(450px) {
+            max-width: 200px;
         }
     }
 }
@@ -87,7 +96,7 @@
         & {
             .awa-skill-math-circle {
                 fill: none;
-                stroke-width: .2;
+                stroke-width: 0.2;
                 stroke-dasharray: 100;
                 stroke-linecap: butt;
 
@@ -126,11 +135,13 @@
 
         .awa-skill-circle-percentage {
             @include center(both);
+            @include size(50px);
             color: white;
             @include font-poppins-300;
             font-size: 1.5rem;
+            text-align: center;
             font-weight: 300;
-            line-height: 1;
+            line-height: 50px;
         }
     }
 
