@@ -2178,7 +2178,7 @@ path.awa-path-p4-4 {
       -moz-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-      .awa-contact-grid > [class*=fxg-1-] {
+      .awa-contact-grid > [class*="fxg-1-"] {
         width: 100%;
         padding-right: 0; } }
   @media screen and (max-width: 767px) {
@@ -2208,11 +2208,11 @@ path.awa-path-p4-4 {
       padding-left: 30px;
       padding-right: 30px; } }
   @media screen and (max-width: 1023px) {
-      .awa-contact-grid.awa-contact-grid-sd > [class*=fxg-1-] {
+      .awa-contact-grid.awa-contact-grid-sd > [class*="fxg-1-"] {
         width: 50%;
         padding-right: 0; } }
     @media screen and (max-width: 1023px) and (max-width: 650px) {
-      .awa-contact-grid.awa-contact-grid-sd > [class*=fxg-1-] {
+      .awa-contact-grid.awa-contact-grid-sd > [class*="fxg-1-"] {
         width: 100%; } }
 
 @media screen and (max-width: 1023px) {
@@ -2292,7 +2292,7 @@ path.awa-path-p4-4 {
       padding-left: 0; } }
   .awa-contact-cta .awa-contact-cta-inner {
     height: 100%;
-    background: #fcd042;
+    background: rgba(252, 208, 66, 0.75);
     -webkit-box-shadow: 10px 10px 0 0 #d3ddd5;
     box-shadow: 10px 10px 0 0 #d3ddd5; }
 

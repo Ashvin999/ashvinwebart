@@ -1,6 +1,6 @@
 #awa-contact {
     background-color: #e1e9e2;
-    background-image: url('../images/awa-map.png');
+    background-image: url("../images/awa-map.png");
     background-size: cover;
     background-position: center -110px;
     background-repeat: no-repeat;
@@ -41,9 +41,9 @@
 
         .awa-gun-shot-circle-2 {
             overflow: hidden;
-            background: rgba($limeGreen, .3);
+            background: rgba($limeGreen, 0.3);
         }
-        
+
         .awa-gun-shot-circle-3 {
             overflow: hidden;
         }
@@ -68,7 +68,7 @@
     @include customMax(1023px) {
         @include flex-wrap(wrap);
 
-        > [class*=fxg-1-] {
+        > [class*="fxg-1-"] {
             width: 100%;
             padding-right: 0;
         }
@@ -90,7 +90,7 @@
                 padding-left: 30px;
                 padding-right: 30px;
             }
-            > [class*=fxg-1-] {
+            > [class*="fxg-1-"] {
                 width: 50%;
                 padding-right: 0;
 
@@ -104,7 +104,6 @@
 
 .awa-contact-cta-box,
 .awa-contact-email-box {
-
     @include customMax(1023px) {
         &.awa-contact-cta-box {
             margin-right: 5px;
@@ -182,7 +181,7 @@
 
     .awa-contact-cta-inner {
         height: 100%;
-        background: $yellow;
+        background: rgba($yellow, 0.75);
         -webkit-box-shadow: 10px 10px 0 0 #d3ddd5;
         box-shadow: 10px 10px 0 0 #d3ddd5;
     }
