@@ -100,6 +100,14 @@
                 stroke-dasharray: 100;
                 stroke-linecap: butt;
 
+                @include customMin(1441px) {
+                    stroke-width: 0.4;
+                }
+
+                @include breakpoint(mobile) {
+                    stroke-width: 0.4;
+                }
+
                 &[data-progress] {
                     @include transition(all 3s ease-in-out);
                 }

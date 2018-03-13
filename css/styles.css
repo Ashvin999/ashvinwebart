@@ -1,9 +1,14 @@
 /**
  * Nik's Edition
  */
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+body {
+  overflow-x: hidden; }
 
 /* normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -1678,6 +1683,12 @@ body.awa-nav-active #awa-mobile-nav li {
       stroke-width: 0.2;
       stroke-dasharray: 100;
       stroke-linecap: butt; }
+      @media screen and (min-width: 1441px) {
+        .awa-skill-box .awa-skill-circle-box .awa-skill-math-circle {
+          stroke-width: 0.4; } }
+      @media screen and (max-width: 767px) {
+        .awa-skill-box .awa-skill-circle-box .awa-skill-math-circle {
+          stroke-width: 0.4; } }
       .awa-skill-box .awa-skill-circle-box .awa-skill-math-circle[data-progress] {
         -webkit-transition: all 3s ease-in-out;
         -moz-transition: all 3s ease-in-out;
@@ -2031,9 +2042,10 @@ body.awa-nav-active #awa-mobile-nav li {
 
 .awa-logo-design-phase {
   padding: 0 30px 0; }
-  .awa-logo-design-phase > img {
+  .awa-logo-design-phase img {
     width: 100%;
-    max-width: 100%; }
+    max-width: 222px;
+    max-height: 222px; }
 
 [id^="awa-logo-design-phase-"] {
   -webkit-transition: all 0.25s linear;
