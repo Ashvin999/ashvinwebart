@@ -199,15 +199,51 @@
     @include breakpoint(mobile) {
         .awa-folio-sm-yellow {
             background: $yellow;
+            .awa-overlay-category {
+                background: $yellow;
+                > span > span {
+                    color: $yellow;
+                    &:before {
+                        background: white;
+                    }
+                }
+            }
         }
         .awa-folio-sm-skyblue {
             background: $skyBlue;
+            .awa-overlay-category {
+                background: $skyBlue;
+                > span > span {
+                    color: $skyBlue;
+                    &:before {
+                        background: white;
+                    }
+                }
+            }
         }
         .awa-folio-sm-grey {
             background: $greyishWhite;
+            .awa-overlay-category {
+                background: $greyishWhite;
+                > span > span {
+                    color: $red;
+                    &:before {
+                        background: #555;
+                    }
+                }
+            }
         }
         .awa-folio-sm-red {
             background: $red;
+            .awa-overlay-category {
+                background: $red;
+                > span > span {
+                    color: $red;
+                    &:before {
+                        background: white;
+                    }
+                }
+            }
         }
     }
 

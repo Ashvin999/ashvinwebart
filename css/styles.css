@@ -2274,12 +2274,36 @@ path.awa-path-p4-4 {
 @media screen and (max-width: 767px) {
   .awa-folio-grid .awa-folio-sm-yellow {
     background: #fcd042; }
+    .awa-folio-grid .awa-folio-sm-yellow .awa-overlay-category {
+      background: #fcd042; }
+      .awa-folio-grid .awa-folio-sm-yellow .awa-overlay-category > span > span {
+        color: #fcd042; }
+        .awa-folio-grid .awa-folio-sm-yellow .awa-overlay-category > span > span:before {
+          background: white; }
   .awa-folio-grid .awa-folio-sm-skyblue {
     background: #d0e7e1; }
+    .awa-folio-grid .awa-folio-sm-skyblue .awa-overlay-category {
+      background: #d0e7e1; }
+      .awa-folio-grid .awa-folio-sm-skyblue .awa-overlay-category > span > span {
+        color: #d0e7e1; }
+        .awa-folio-grid .awa-folio-sm-skyblue .awa-overlay-category > span > span:before {
+          background: white; }
   .awa-folio-grid .awa-folio-sm-grey {
     background: #f0f0f0; }
+    .awa-folio-grid .awa-folio-sm-grey .awa-overlay-category {
+      background: #f0f0f0; }
+      .awa-folio-grid .awa-folio-sm-grey .awa-overlay-category > span > span {
+        color: #ef5e65; }
+        .awa-folio-grid .awa-folio-sm-grey .awa-overlay-category > span > span:before {
+          background: #555; }
   .awa-folio-grid .awa-folio-sm-red {
-    background: #ef5e65; } }
+    background: #ef5e65; }
+    .awa-folio-grid .awa-folio-sm-red .awa-overlay-category {
+      background: #ef5e65; }
+      .awa-folio-grid .awa-folio-sm-red .awa-overlay-category > span > span {
+        color: #ef5e65; }
+        .awa-folio-grid .awa-folio-sm-red .awa-overlay-category > span > span:before {
+          background: white; } }
 
 @media screen and (max-width: 500px) {
   .awa-folio-grid .awa-folio-xsm-yellow {
