@@ -39,3 +39,7 @@
         display: block;
     }
 }
+
+.screen-reader {
+    @extend %screen-reader;
+}

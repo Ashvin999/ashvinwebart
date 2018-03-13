@@ -150,7 +150,7 @@ var phaseTwo = {
         }
     );
 
-    $(".awa-menu-item").on("click", function(e) {
+    $(".awa-menu-item, #awa-mobile-nav a").on("click", function(e) {
         e.preventDefault();
         var el = $(this),
             target = el.attr("href");
@@ -232,6 +232,10 @@ var phaseTwo = {
     });
 
     $("#awa-contact-form").on("submit", function(e) {
-        e.preventDefault();
+        setTimeout(function() {
+            $(this)
+                .find('button[type="reset"]')
+                .trigger("click");
+        }, 250);
     });
 })(jQuery);

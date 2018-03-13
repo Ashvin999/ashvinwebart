@@ -396,6 +396,16 @@ template {
 [hidden] {
   display: none; }
 
+.screen-reader {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
 .fxg-pad {
   padding: 20px 0 20px 20px;
   display: -webkit-box;
