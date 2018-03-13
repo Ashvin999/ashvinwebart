@@ -838,6 +838,12 @@ a:link {
     height: 140px; }
   .form-group .text-input:focus {
     outline: none; }
+  .form-group input:required,
+  .form-group textarea:required {
+    box-shadow: none; }
+  .form-group input:invalid,
+  .form-group textarea:required {
+    box-shadow: none; }
   .form-group label {
     color: #ef5e65;
     font-family: "Poppins-Regular";
@@ -861,7 +867,7 @@ a:link {
     width: 100%; }
   .form-group .bar:before,
   .form-group .bar:after {
-    content: '';
+    content: "";
     height: 1px;
     width: 0;
     bottom: 0;

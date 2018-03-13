@@ -27,6 +27,16 @@
         outline: none;
     }
 
+    input:required,
+    textarea:required {
+        box-shadow: none;
+    }
+
+    input:invalid,
+    textarea:required {
+        box-shadow: none;
+    }
+
     // LABELS
     label {
         color: $red;
@@ -43,8 +53,8 @@
     }
 
     // ACTIVE STATE
-    .text-input:focus~label,
-    .text-input:valid~label {
+    .text-input:focus ~ label,
+    .text-input:valid ~ label {
         top: -20px;
         font-size: 14px;
         color: $blueText;
@@ -59,7 +69,7 @@
 
     .bar:before,
     .bar:after {
-        content: '';
+        content: "";
         height: 1px;
         width: 0;
         bottom: 0;
@@ -79,8 +89,8 @@
     }
 
     // ACTIVE STATE
-    .text-input:focus~.bar:before,
-    .text-input:focus~.bar:after {
+    .text-input:focus ~ .bar:before,
+    .text-input:focus ~ .bar:after {
         width: 50%;
     }
 
@@ -96,9 +106,8 @@
         display: none;
     }
 
-
     // ACTIVE STATE
-    .text-input:focus~.highlight {
+    .text-input:focus ~ .highlight {
         @include animation(materialBar 0.3s ease);
     }
 
@@ -126,7 +135,7 @@
     padding: 15px 40px 13px;
     letter-spacing: 1px;
     cursor: pointer;
-    @include transition(background .15s linear);
+    @include transition(background 0.15s linear);
 
     &.awa-btn-green {
         background: $limeGreen;
