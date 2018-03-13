@@ -1685,10 +1685,10 @@ body.awa-nav-active #awa-mobile-nav li {
       stroke-linecap: butt; }
       @media screen and (min-width: 1441px) {
         .awa-skill-box .awa-skill-circle-box .awa-skill-math-circle {
-          stroke-width: 0.4; } }
+          stroke-width: 0.3; } }
       @media screen and (max-width: 767px) {
         .awa-skill-box .awa-skill-circle-box .awa-skill-math-circle {
-          stroke-width: 0.4; } }
+          stroke-width: 0.3; } }
       .awa-skill-box .awa-skill-circle-box .awa-skill-math-circle[data-progress] {
         -webkit-transition: all 3s ease-in-out;
         -moz-transition: all 3s ease-in-out;

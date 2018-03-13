@@ -101,11 +101,11 @@
                 stroke-linecap: butt;
 
                 @include customMin(1441px) {
-                    stroke-width: 0.4;
+                    stroke-width: 0.3;
                 }
 
                 @include breakpoint(mobile) {
-                    stroke-width: 0.4;
+                    stroke-width: 0.3;
                 }
 
                 &[data-progress] {

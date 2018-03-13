@@ -128,10 +128,12 @@ var phaseTwo = {
         });
     }
 
+    var circleAnimationFlag = true;
     var circleAnimationWP = $(".awa-circle-animation").waypoint(
         function(direction) {
-            if (direction === "down") {
+            if (direction === "down" && circleAnimationFlag) {
                 setTimeout(circleAnimation(), 250);
+                circleAnimationFlag = false;
             }
         },
         {
@@ -139,10 +141,12 @@ var phaseTwo = {
         }
     );
 
-    var circleAnimationWP = $(".awa-logo-phase-animation").waypoint(
+    var logoAnimationWPFlag = true;
+    var logoAnimationWP = $(".awa-logo-phase-animation").waypoint(
         function(direction) {
-            if (direction === "down") {
+            if (direction === "down" && logoAnimationWPFlag) {
                 setTimeout(logoPhaseOne(), 250);
+                logoAnimationWPFlag = false;
             }
         },
         {
