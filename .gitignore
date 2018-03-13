@@ -4,3 +4,4 @@ DATA
 node_modules
 package-lock.json
 Assets
+scss
