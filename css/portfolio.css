@@ -1,0 +1,87 @@
+.page-folio #awa-work .awa-section-header:after {
+    display: none;
+}
+
+.page-folio .awa-section-sub-title {
+    color: #ef5e65;
+}
+
+.page-folio #awa-hello .awa-hamburger-icon {
+    margin-bottom: 0;
+}
+
+.page-folio #awa-hello {
+    margin: 0;
+    padding-bottom: 12px;
+}
+
+.page-folio.large-menu .awa-hb-path-outer-stroke,
+.page-folio.large-menu .awa-hb-path-inner-stroke {
+    transform: rotate(0);
+}
+
+.page-folio #awa-menu-toggle {
+    pointer-events: none;
+}
+
+.page-folio #awa-menu-toggle .awa-hb-path-outer-stroke,
+.page-folio #awa-menu-toggle .awa-hb-path-inner-stroke {
+    transform: rotate(45deg);
+}
+
+.page-folio .awa-body {
+    max-width: 750px;
+}
+
+.page-folio .to-home {
+    padding: 20px 33px 18px;
+    display: inline-block;
+    text-decoration: none;
+    background: #EF5E64;
+    color: white;
+    margin-bottom: 1rem;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    outline: none;
+    border: 2px solid transparent;
+
+    transition: .15s linear;
+}
+
+.page-folio .to-home:hover,
+.page-folio .to-home:active,
+.page-folio .to-home:focus {
+    border: 2px solid #EF5E64;
+    color: #EF5E64;
+    background: transparent;
+}
+
+.page-folio #awa-header {
+    height: 400px;
+    overflow: hidden;
+}
+
+.page-folio #awa-work {
+    position: relative;
+    background: none;
+}
+
+.page-folio #awa-work:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-image: url(../images/awa-work-cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    opacity: .5;
+}
+
+.page-folio #awa-work>* {
+    z-index: 100;
+    position: relative;
+}
