@@ -65,7 +65,7 @@
     height: 540px;
     overflow: hidden;
     background-image: url(../images/awa-folio-cover.jpg);
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
