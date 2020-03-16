@@ -56,9 +56,17 @@
     background: transparent;
 }
 
+.page-folio .awa-header-left-grid {
+    background: transparent;
+}
+
 .page-folio #awa-header {
-    height: 400px;
+    min-height: 350px;
+    height: 540px;
     overflow: hidden;
+    background-image: url(../images/awa-folio-cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .page-folio #awa-work {

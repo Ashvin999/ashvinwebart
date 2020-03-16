@@ -122,38 +122,11 @@
 		<header id="awa-header" class="awa-header">
 			<div class="awa-header-inner">
 				<div class="fxg-pad nopadding awa-header-grid">
-					<div class="fxg-1-8 awa-header-left-grid">
-						<div class="awa-header-left">
-							<div class="awa-header-left-top">
-								<div class="awa-header-logo">
-									<a href="/">
-										<img src="images/awa-logo.svg" alt="Ashvin Web Art">
-									</a>
-								</div>
-								<div class="awa-scale">
-									<img src="images/awa-scale.svg" class="awa-pulse" alt="">
-								</div>
-							</div>
-							<div class="awa-header-left-middle">
-								<div class="awa-header-anchor-point">
-									<img src="images/awa-anchor-point.svg" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="fxg-1-4 awa-header-right-grid">
-						<div class="awa-header-right">
-							<div class="awa-header-right-coffee-area fxg-flexy aife jcc">
-								<div class="awa-header-right-coffee">
-									<img src="images/awa-coffee.svg" alt="">
-								</div>
-							</div>
-
-							<div class="awa-header-right-book-area fxg-flexy aife jcc">
-								<div class="awa-header-right-book">
-									<img src="images/awa-book.svg" alt="">
-								</div>
-							</div>
+					<div class="fxg-1-12 awa-header-left-grid">
+						<div class="awa-header-logo">
+							<a href="/">
+								<img src="images/awa-logo.svg" alt="Ashvin Web Art">
+							</a>
 						</div>
 					</div>
 				</div>
@@ -596,6 +569,22 @@
 	</div>
 
 	<script src="js/app.min.js"></script>
+
+	<script>
+		function headerHeight() {
+			var target = document.querySelector('.page-folio #awa-header');
+			var xw = target.clientWidth;
+			var nh = (xw * 450) / 1600;
+			target.style.height = nh + 'px';
+		}
+		headerHeight();
+
+		var resizeTimer;
+		window.onresize = function () {
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(headerHeight(), 250);
+		}
+	</script>
 </body>
 
 </html>
